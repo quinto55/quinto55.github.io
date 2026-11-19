@@ -21,6 +21,23 @@
 <link rel="apple-touch-icon" href="/emc-site/icons/apple-touch-icon.png">
 <link rel="manifest" href="/emc-site/site.webmanifest">
 <script>document.documentElement.classList.add('js')</script>
+<script>(function(){var show=function shouldShowCurtain({ path: path2, width, reducedMotion, hash, seen }) {
+  return path2 === "/" && width >= 1001 && !reducedMotion && !hash && !seen;
+};var read=function curtainInputs(win, seenKey) {
+  var seen = false;
+  var reducedMotion = false;
+  try {
+    seen = win.sessionStorage.getItem(seenKey) !== null;
+  } catch (e) {
+    seen = false;
+  }
+  try {
+    reducedMotion = win.matchMedia("(prefers-reduced-motion: reduce)").matches === true;
+  } catch (e) {
+    reducedMotion = false;
+  }
+  return { path: win.location.pathname, width: win.innerWidth, reducedMotion, hash: win.location.hash, seen };
+};try{if(show(read(window,"emc-curtain-seen")))document.documentElement.classList.add('curtain-pending')}catch(e){}})()</script>
 <link rel="preload" href="/emc-site/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/emc-site/fonts/figtree-var.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
@@ -41,16 +58,17 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/emc-site/assets/home-DYub8BRJ.js"></script>
+  <script type="module" crossorigin src="/emc-site/assets/home-D3NcyiZm.js"></script>
   <link rel="modulepreload" crossorigin href="/emc-site/assets/site-WiQA4oX6.js">
   <link rel="modulepreload" crossorigin href="/emc-site/assets/dashboard-view-lSlZAbJR.js">
   <link rel="stylesheet" crossorigin href="/emc-site/assets/site-e3CYrd8K.css">
   <link rel="stylesheet" crossorigin href="/emc-site/assets/dashboard-view-cUcIrWe1.css">
-  <link rel="stylesheet" crossorigin href="/emc-site/assets/home-D8gmU9jh.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/home-D23THmZ4.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<!-- The stage: the photo sits behind the header and the hero (a later full-window cover can sit over it). -->
+<!-- The stage: the photo sits behind the header and the hero. On a computer's first view the curtain covers the whole
+     window over it (the head script and src/styles/curtain.css, then src/curtain/curtain.js); it is never in this HTML. -->
 <div class="stage">
   <div class="hero-photo">
     <picture>
