@@ -23,13 +23,13 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/emc-site/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/emc-site/fonts/figtree-var.woff2" as="font" type="font/woff2" crossorigin>
-  <script type="module" crossorigin src="/emc-site/assets/platform-CGAvh4Jh.js"></script>
+  <script type="module" crossorigin src="/emc-site/assets/platform-DKR2to4M.js"></script>
   <link rel="modulepreload" crossorigin href="/emc-site/assets/site-WiQA4oX6.js">
-  <link rel="modulepreload" crossorigin href="/emc-site/assets/dashboard-view-lSlZAbJR.js">
+  <link rel="modulepreload" crossorigin href="/emc-site/assets/dashboard-view-DG7DsRmZ.js">
   <link rel="modulepreload" crossorigin href="/emc-site/assets/show-oUOW7kwd.js">
   <link rel="stylesheet" crossorigin href="/emc-site/assets/site-e3CYrd8K.css">
   <link rel="stylesheet" crossorigin href="/emc-site/assets/dashboard-view-cUcIrWe1.css">
-  <link rel="stylesheet" crossorigin href="/emc-site/assets/platform-Dy-Jybdx.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/platform-BgSGaK7e.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -145,22 +145,28 @@
 
     <div class="group">
       <p class="group-label"><span class="num-square teal">02</span> Scan</p>
-      <div class="pair">
-        <section class="block card" id="gate-scanning">
+      <section class="block card watch" id="gate-scanning">
+        <div class="block-text">
           <h2>Gate scanning</h2>
           <p class="say">Any gate, duplicates blocked. Barcode or QR.</p>
           <p>A ticket gets in once. Scan it again and the gate sees it has already been used.</p>
-        </section>
+        </div>
+        <div class="block-media">
+<div class="gs" data-demo="gate-scanning" data-sample role="group" aria-label="Sample gate scan"><div class="gs-phone"><div class="gs-screen"><p class="gs-bar"><span class="pill-sample">Sample data</span></p><div class="gs-ticket"><p class="gs-ticket__fair">Demo County Fair</p><p class="gs-ticket__label"><span class="gs-keep">Adult admission ·</span> <span class="gs-keep">Fri, Jul 16, 2027</span></p><div class="gs-ticket__stub"><img class="gs-ticket__qr" src="/emc-site/img/sample-ticket-qr.svg" width="150" height="150" alt="QR code for the sample ticket"><p class="gs-ticket__order">Order DCF-001234</p><p class="gs-ticket__note">Sample ticket. Not valid for entry.</p></div></div><div class="gs-slot"><p class="gs-rest" data-gs-rest hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M7 12h10"/></svg>Ready to scan</p><div class="gs-result" data-gs-result></div></div></div></div><div class="visually-hidden" role="status" data-gs-status></div><div class="gs-controls"><button type="button" class="btn gs-scan" data-gs-scan hidden>Scan ticket</button><button type="button" class="btn ghost gs-reset" data-gs-reset hidden>Start over</button><div class="db gs-board" data-gs-board hidden><div class="db-panel db-fraud"><div class="db-panel__head"><h3 class="db-panel__title">Fraud watch</h3><span class="gs-board__tag">Live board</span></div><ul class="db-fraud__counts"><li><strong data-gs-count>0</strong> <span>Presented again</span></li></ul><ol class="db-fraud__list" data-gs-tries></ol></div></div></div></div>
+        </div>
+        <div class="block-act">
+          <a class="talk-link" href="#talk"><span class="arrow">Let's talk about your fair</span></a>
+        </div>
+      </section>
 
-        <section class="block card" id="rfid">
-          <div class="block-head">
-            <h2>RFID wristbands</h2>
-            <span class="tag">Later in 2027</span>
-          </div>
-          <p class="say">RFID wristbands later in 2027.</p>
-          <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
-        </section>
-      </div>
+      <section class="block card" id="rfid">
+        <div class="block-head">
+          <h2>RFID wristbands</h2>
+          <span class="tag">Later in 2027</span>
+        </div>
+        <p class="say">RFID wristbands later in 2027.</p>
+        <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
+      </section>
     </div>
 
     <div class="group">
@@ -191,9 +197,15 @@
         </div>
       </section>
 
-      <section class="block card strip reports" id="daily-reports">
-        <h2>Daily reports</h2>
-        <p class="say">Sales by ticket type and by channel, scans by gate, and the day's totals.</p>
+      <section class="block card reports" id="daily-reports">
+        <div class="reports-head">
+          <h2>Daily reports</h2>
+          <p class="say">Sales by ticket type and by channel, scans by gate, and the day's totals.</p>
+        </div>
+<div class="dr" data-day-report data-sample role="group" aria-label="Sample daily report"><div class="dr-head"><h3 class="dr-title">Demo County Fair, Thursday</h3><span class="pill-sample">Sample data</span></div><ul class="dr-tiles"><li class="dr-tile" data-total="tickets"><span class="dr-tile__label">Tickets sold</span> <strong class="dr-tile__value">5,918</strong></li><li class="dr-tile" data-total="gross"><span class="dr-tile__label">Gross to event</span> <strong class="dr-tile__value">$91,854</strong></li><li class="dr-tile" data-total="admitted"><span class="dr-tile__label">Admitted</span> <strong class="dr-tile__value">3,927</strong></li></ul><p class="dr-note">Tickets sold counts add-ons too. Admitted counts admission tickets only.</p><div class="dr-body"><section class="dr-section" data-section="types"><h4 id="dr-types">By ticket type</h4><div class="dr-scroll" tabindex="0" role="region" aria-labelledby="dr-types"><table><caption class="visually-hidden">Money by ticket type</caption><thead><tr><th scope="col">Ticket type</th><th scope="col" class="dr-kind"><span class="dr-kind__text">Kind</span></th><th scope="col" class="num">Sold</th><th scope="col" class="num">Gross to event</th></tr></thead><tbody><tr><th scope="row">Adult admission<span class="dr-kind-under" aria-hidden="true">Admission</span></th><td class="dr-kind"><span class="dr-kind__text">Admission</span></td><td class="num">2,864</td><td class="num">$34,368</td></tr><tr><th scope="row">Child admission<span class="dr-kind-under" aria-hidden="true">Admission</span></th><td class="dr-kind"><span class="dr-kind__text">Admission</span></td><td class="num">1,186</td><td class="num">$7,116</td></tr><tr><th scope="row">Ride wristband<span class="dr-kind-under" aria-hidden="true">Rides</span></th><td class="dr-kind"><span class="dr-kind__text">Rides</span></td><td class="num">1,178</td><td class="num">$35,340</td></tr><tr><th scope="row">Family 4-pack<span class="dr-kind-under" aria-hidden="true">Admission</span></th><td class="dr-kind"><span class="dr-kind__text">Admission</span></td><td class="num">271</td><td class="num">$10,840</td></tr><tr><th scope="row">Parking pass<span class="dr-kind-under" aria-hidden="true">Parking</span></th><td class="dr-kind"><span class="dr-kind__text">Parking</span></td><td class="num">419</td><td class="num">$4,190</td></tr></tbody><tfoot><tr><th scope="row">Total</th><td class="dr-kind"></td><td class="num">5,918</td><td class="num">$91,854</td></tr></tfoot></table></div></section><section class="dr-section" data-section="channels"><h4 id="dr-channels">By channel</h4><div class="dr-scroll" tabindex="0" role="region" aria-labelledby="dr-channels"><table><caption class="visually-hidden">Sales by channel</caption><thead><tr><th scope="col">Channel</th><th scope="col" class="num">Tickets</th><th scope="col" class="num">Gross to event</th></tr></thead><tbody><tr><th scope="row">Online</th><td class="num">3,663</td><td class="num">$56,890</td></tr><tr><th scope="row">Box office</th><td class="num">2,255</td><td class="num">$34,964</td></tr></tbody><tfoot><tr><th scope="row">Total</th><td class="num">5,918</td><td class="num">$91,854</td></tr></tfoot></table></div></section><section class="dr-section" data-section="gates"><h4 id="dr-gates">At the gates</h4><div class="dr-scroll" tabindex="0" role="region" aria-labelledby="dr-gates"><table><caption class="visually-hidden">Admitted by entrance</caption><thead><tr><th scope="col">Entrance</th><th scope="col" class="num">Admitted</th></tr></thead><tbody><tr><th scope="row">Main Gate</th><td class="num">2,118</td></tr><tr><th scope="row">North Gate</th><td class="num">1,097</td></tr><tr><th scope="row">Midway Gate</th><td class="num">712</td></tr></tbody><tfoot><tr><th scope="row">Total</th><td class="num">3,927</td></tr></tfoot></table></div></section></div></div>
+        <div class="block-act">
+          <a class="talk-link" href="#talk"><span class="arrow">Let's talk about your fair</span></a>
+        </div>
       </section>
     </div>
 
