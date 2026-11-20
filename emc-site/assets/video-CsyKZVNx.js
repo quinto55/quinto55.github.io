@@ -1,1 +1,0 @@
-import{t as n}from"./site-BmJ_eWA2.js";function c(a=document,r=n){const o=[...a.querySelectorAll("[data-video] video")],d=new Set;for(const t of o)t.addEventListener("play",()=>{for(const i of o)i!==t&&i.pause();const e=t.closest("[data-video]").getAttribute("data-video");d.has(e)||(d.add(e),r("video_play",{id:e}))})}export{c as i};
