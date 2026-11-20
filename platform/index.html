@@ -23,13 +23,16 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="/emc-site/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/emc-site/fonts/figtree-var.woff2" as="font" type="font/woff2" crossorigin>
-  <script type="module" crossorigin src="/emc-site/assets/platform-CbtgWG0T.js"></script>
-  <link rel="modulepreload" crossorigin href="/emc-site/assets/site-C3PKmm8T.js">
+  <script type="module" crossorigin src="/emc-site/assets/platform-EiZcwuP6.js"></script>
+  <link rel="modulepreload" crossorigin href="/emc-site/assets/site-BmJ_eWA2.js">
+  <link rel="modulepreload" crossorigin href="/emc-site/assets/video-CsyKZVNx.js">
   <link rel="modulepreload" crossorigin href="/emc-site/assets/dashboard-view-VwF4-nA5.js">
   <link rel="modulepreload" crossorigin href="/emc-site/assets/show-oUOW7kwd.js">
-  <link rel="stylesheet" crossorigin href="/emc-site/assets/site-B66H4016.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/site-Ck0gKv9D.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/video-Q5ftpjmY.css">
   <link rel="stylesheet" crossorigin href="/emc-site/assets/dashboard-view-ClW0wozu.css">
-  <link rel="stylesheet" crossorigin href="/emc-site/assets/platform-BgSGaK7e.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/platform-BX7pSfMd.css">
+  <link rel="stylesheet" crossorigin href="/emc-site/assets/features-CCFWDXEV.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -38,6 +41,7 @@
     <a class="top-logo" href="/"><img class="logo" src="/emc-site/img/emc-logo-on-light.png" width="298" height="238" alt="EMC Tickets"></a>
     <nav class="top-nav" aria-label="Primary">
       <a href="/platform/" data-nav="platform" aria-current="page">Platform</a>
+      <a href="/fair-services/" data-nav="services">Fair services</a>
       <a href="/retail-partners/" data-nav="retail">Retail partners</a>
       <a href="/marketing/" data-nav="marketing">Marketing</a>
       <a href="/about/" data-nav="about">About</a>
@@ -47,13 +51,14 @@
       <a href="https://app.emctickets.com/portal/login">Client login</a>
       <a class="btn" href="#talk">Let's talk</a>
     </div>
-    <button type="button" class="menu" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="site-menu"></button>
+    <button type="button" class="menu" data-menu-toggle aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="menu-word" aria-hidden="true">Menu</span></button>
   </div>
   <div id="site-menu" class="menu-panel" hidden>
     <div class="wrap">
       <nav class="menu-card" aria-label="Menu">
         <ul class="menu-pages">
           <li><a href="/platform/" data-nav="platform" aria-current="page">Platform</a></li>
+          <li><a href="/fair-services/" data-nav="services">Fair services</a></li>
           <li><a href="/retail-partners/" data-nav="retail">Retail partners</a></li>
           <li><a href="/marketing/" data-nav="marketing">Marketing</a></li>
           <li><a href="/about/" data-nav="about">About</a></li>
@@ -77,12 +82,15 @@
         <ul>
           <li><a class="sell" href="#online-sales">Online sales</a></li>
           <li><a class="sell" href="#box-office">Box office POS</a></li>
-          <li><a class="sell" href="#retail">Retail stores</a></li>
           <li><a class="scan" href="#gate-scanning">Gate scanning</a></li>
           <li><a class="scan" href="#rfid">RFID wristbands</a></li>
           <li><a class="count" href="#live-dashboard">Live dashboard</a></li>
           <li><a class="count" href="#daily-reports">Daily reports</a></li>
-          <li><a class="guest" href="#guests">New for your guests</a></li>
+        </ul>
+        <ul>
+          <li><a class="guest" href="#retail">Retail stores</a></li>
+          <li><a class="guest" href="#guest-map">Interactive fair map</a></li>
+          <li><a class="guest" href="#fair-services">Fair services</a></li>
         </ul>
       </nav>
     </div>
@@ -127,18 +135,6 @@
           <a class="btn tour-link" href="https://app.emctickets.com/pos/tour" target="_blank" rel="noopener" aria-describedby="tour-note">Take the full box office tour<span class="visually-hidden"> (opens in a new tab)</span><svg class="tour-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="15" height="15"><path d="M9.5 2.5h4v4M13.5 2.5 7.5 8.5M11.5 9.5v3a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <p class="tour-note" id="tour-note">Opens the real register with sample data, so you can try it yourself.</p>
           <a class="talk-link" href="#talk"><span class="arrow">Let's talk about your fair</span></a>
-        </div>
-      </section>
-
-      <section class="block card strip retail" id="retail">
-        <div class="strip-lead">
-          <h2>Retail stores</h2>
-          <p>EMC is the exclusive event ticket partner of Walgreens.</p>
-        </div>
-        <p class="stat"><b>8,000+</b> retail locations</p>
-        <div class="strip-more">
-          <p>Same benefits at Circle K and Menards.</p>
-          <a class="talk-link" href="/retail-partners/"><span class="arrow">See how retail works</span></a>
         </div>
       </section>
     </div>
@@ -209,12 +205,29 @@
       </section>
     </div>
 
-    <section class="guests" id="guests">
-      <h2>New for your guests</h2>
-      <div class="guest-grid">
-        <section class="guest card" id="guest-map">
-          <h3>Interactive fair map</h3>
-          <p>Your grounds on every phone.</p>
+    <div id="guests">
+      <div class="group">
+        <p class="group-label"><span class="num-square plus" aria-hidden="true">+</span> In stores and on the grounds</p>
+
+        <section class="block card strip retail" id="retail">
+          <div class="strip-lead">
+            <h2>Retail stores</h2>
+            <p>EMC is the exclusive event ticket partner of Walgreens.</p>
+          </div>
+          <p class="stat"><b>8,000+</b> retail locations</p>
+          <div class="strip-more">
+            <p>Same benefits at Circle K and Menards.</p>
+            <a class="talk-link card-link" href="/retail-partners/"><span class="arrow">See how retail works</span></a>
+          </div>
+        </section>
+
+        <section class="block card watch watch-points" id="guest-map">
+          <div class="block-text">
+            <h2>Interactive fair map</h2>
+            <p class="say">Your grounds on every phone, with nothing to download.</p>
+            <p>Search, walking directions, tonight's shows and find your car.</p>
+          </div>
+          <div class="block-media">
 <figure class="video" data-video="fair-map">
   <video controls playsinline preload="none" poster="/emc-site/video/emc-fair-map-web-poster.jpg" width="1920" height="1080" aria-label="Interactive fair map video">
     <source src="/emc-site/video/emc-fair-map-web.mp4" type="video/mp4">
@@ -222,39 +235,45 @@
   </video>
   <figcaption>A real fair's map, with the fair's name left out. About a minute.</figcaption>
 </figure>
-          <p class="guest-more">Search, walking directions, tonight's shows and find your car.</p>
-          <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
-        </section>
-
-        <section class="guest card" id="guest-pip">
-          <h3>Pip</h3>
-          <p>A talking AI clown for the front gate.</p>
-<figure class="video" data-video="pip">
-  <video controls playsinline preload="none" poster="/emc-site/video/emc-pip-gate-helper-web-poster.jpg" width="1920" height="1080" aria-label="Pip video">
-    <source src="/emc-site/video/emc-pip-gate-helper-web.mp4" type="video/mp4">
-    <a href="/emc-site/video/emc-pip-gate-helper-web.mp4">Watch the video: Pip</a>
-  </video>
-  <figcaption>Pip answering guests at a front gate kiosk. Under a minute.</figcaption>
-</figure>
-          <p class="guest-more">Fully customizable: Pip is one face. Yours can be a real person (with their permission), a made-up person or a character: anything that isn't trademarked.</p>
-          <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
-        </section>
-
-        <section class="guest card" id="guest-call-line">
-          <h3>Ticket-buyer call line</h3>
-          <p>Every call answered, in English y en español.</p>
-<figure class="video" data-video="phone-line">
-  <video controls playsinline preload="none" poster="/emc-site/video/emc-phone-line-web-poster.jpg" width="1920" height="1080" aria-label="Ticket-buyer call line video">
-    <source src="/emc-site/video/emc-phone-line-web.mp4" type="video/mp4">
-    <a href="/emc-site/video/emc-phone-line-web.mp4">Watch the video: Ticket-buyer call line</a>
-  </video>
-  <figcaption>A sample call, with the fair's name left out. About a minute.</figcaption>
-</figure>
-          <p class="guest-more">An AI phone line that answers from your fair's own facts, at any hour.</p>
-          <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
+          </div>
+          <ul class="points block-points">
+            <li><b>Search for the food</b> <span>People type funnel cake, not a vendor's name. The map finds it and walks them there.</span></li>
+            <li><b>Find the car at closing</b> <span>They save the spot when they park. The map walks them back.</span></li>
+            <li><b>A report for you</b> <span>Map opens, top searches and sponsor views, ready for next year's sponsors.</span></li>
+          </ul>
+          <div class="block-act">
+            <p class="booth-note" data-booth-note hidden>See it at Booth #410</p>
+            <a class="talk-link" href="#talk"><span class="arrow">Let's talk about your fair</span></a>
+          </div>
         </section>
       </div>
-    </section>
+
+<section class="svc-band" id="fair-services" aria-labelledby="svc-band-h">
+  <div class="svc-band-head">
+    <div>
+      <p class="kicker">Fair services</p>
+      <h2 id="svc-band-h">Every guest, answered.</h2>
+      <p class="lede">At the gate and on the phone, from your fair's own facts.</p>
+    </div>
+    <a class="btn ghost" href="/fair-services/"><span class="arrow">See fair services</span></a>
+  </div>
+  <div class="pair">
+    <a class="tile" id="guest-pip" href="/fair-services/#pip">
+      <span class="shot"><img src="/emc-site/video/emc-pip-gate-helper-web-poster.jpg" width="960" height="540" alt="" loading="lazy" decoding="async"></span>
+      <h3>Pip</h3>
+      <p>A talking AI clown for the front gate.</p>
+      <span class="tile-go"><span class="arrow">Meet Pip</span></span>
+    </a>
+    <a class="tile" id="guest-call-line" href="/fair-services/#call-line">
+      <span class="shot"><img src="/emc-site/video/emc-phone-line-web-poster.jpg" width="960" height="540" alt="" loading="lazy" decoding="async"></span>
+      <h3>Ticket-buyer call line</h3>
+      <p>Every call answered, in English y en español.</p>
+      <span class="tile-go"><span class="arrow">Hear a call</span></span>
+    </a>
+  </div>
+</section>
+
+    </div>
   </div>
 </main>
 <div class="wrap">
@@ -299,6 +318,7 @@
         <p class="foot-label">Pages</p>
         <ul>
           <li><a href="/platform/">Platform</a></li>
+          <li><a href="/fair-services/">Fair services</a></li>
           <li><a href="/retail-partners/">Retail partners</a></li>
           <li><a href="/marketing/">Marketing</a></li>
           <li><a href="/about/">About</a></li>
